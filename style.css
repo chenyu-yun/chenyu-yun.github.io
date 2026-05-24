@@ -1,0 +1,172 @@
+/* 基础设置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.8;
+}
+
+/* 页面整体宽度 */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 顶部导航栏 */
+.site-header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 48px;
+}
+
+.navbar {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  letter-spacing: 0.04em;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #777;
+}
+
+/* 首页布局 */
+.home {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 42px;
+  align-items: start;
+}
+
+.profile-photo {
+  width: 230px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 标题与正文 */
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 18px;
+  letter-spacing: 0.04em;
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: 500;
+  margin-top: 42px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0 0 18px;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #777;
+}
+
+/* 列表 */
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* 页面底部 */
+.site-footer {
+  max-width: 900px;
+  margin: 70px auto 30px;
+  padding: 0 24px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* 随笔列表 */
+.essay-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.essay-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.essay-date {
+  color: #888;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+/* 手机端适配 */
+@media (max-width: 700px) {
+  .navbar {
+    display: block;
+  }
+
+  .nav-links {
+    margin-top: 12px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 18px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
