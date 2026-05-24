@@ -171,3 +171,63 @@ li {
     font-size: 28px;
   }
 }
+
+/* 随笔目录页 */
+.essay-index {
+  margin-top: 36px;
+}
+
+.essay-card {
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.essay-card h2 {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 6px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.essay-card h2 a {
+  text-decoration: none;
+  color: #111;
+}
+
+.essay-card h2 a:hover {
+  color: #777;
+}
+
+.essay-meta {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* 单篇随笔正文 */
+.article-page {
+  max-width: 820px;
+}
+
+.article-title {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.article-meta {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+.article-content p {
+  margin-bottom: 22px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 42px;
+  text-decoration: none;
+  color: #555;
+}
