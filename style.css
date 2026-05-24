@@ -231,3 +231,30 @@ li {
   text-decoration: none;
   color: #555;
 }
+
+/* 联系方式页面 */
+.contact-page {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 52px;
+  align-items: start;
+}
+
+.contact-photo {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+@media (max-width: 760px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+}
