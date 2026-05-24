@@ -13,7 +13,7 @@ body {
 
 /* 页面整体宽度 */
 .container {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 .navbar {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 22px 24px;
   display: flex;
@@ -55,14 +55,15 @@ body {
 /* 首页布局 */
 .home {
   display: grid;
-  grid-template-columns: 230px 1fr;
-  gap: 42px;
+  grid-template-columns: 320px 1fr;
+  gap: 52px;
   align-items: start;
 }
 
+/* 首页头像：保留方形比例 */
 .profile-photo {
-  width: 230px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -115,7 +116,7 @@ li {
 
 /* 页面底部 */
 .site-footer {
-  max-width: 900px;
+  max-width: 980px;
   margin: 70px auto 30px;
   padding: 0 24px;
   color: #888;
@@ -140,7 +141,7 @@ li {
 }
 
 /* 手机端适配 */
-@media (max-width: 700px) {
+@media (max-width: 760px) {
   .navbar {
     display: block;
   }
@@ -162,7 +163,7 @@ li {
 
   .profile-photo {
     width: 100%;
-    max-width: 260px;
+    max-width: 320px;
     height: auto;
   }
 
