@@ -1,59 +1,173 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>云晨宇</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+/* 基础设置 */
+* {
+  box-sizing: border-box;
+}
 
-<body>
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="site-title" href="index.html">云晨宇</a>
-      <div class="nav-links">
-        <a href="index.html">主页</a>
-        <a href="research.html">研究</a>
-        <a href="essays.html">随笔</a>
-        <a href="contact.html">联系方式</a>
-      </div>
-    </nav>
-  </header>
+body {
+  margin: 0;
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.8;
+}
 
-  <main class="container home">
-    <div>
-      <img class="profile-photo" src="assets/profile.jpg" alt="云晨宇的个人照片">
-    </div>
+/* 页面整体宽度 */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-    <div>
-      <h1>云晨宇</h1>
+/* 顶部导航栏 */
+.site-header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 48px;
+}
 
-      <p>
-        我是中央民族大学民族学与社会学学院人类学专业硕士研究生，曾作为访问研究生在蒙古国立大学人类学与考古学系学习并开展田野调查。
-      </p>
+.navbar {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      <p>
-        我的研究关注蒙古国与中国内蒙古牧区的社会变迁，尤其是土地制度、牧业实践、国家治理、市场化改革与跨国资本如何重塑牧民的日常生活、地方关系与道德秩序。
-      </p>
+.site-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #111;
+  letter-spacing: 0.04em;
+}
 
-      <p>
-        目前，我的硕士论文以蒙古国中央省 Bayandelger 苏木 Galuut 队的田野调查为基础，讨论后社会主义蒙古国牧区土地制度改革在地方社会中的实践过程。
-      </p>
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
 
-      <h2>研究兴趣</h2>
+.nav-links a:hover {
+  color: #777;
+}
 
-      <ul>
-        <li>牧业社会与土地制度</li>
-        <li>蒙古国与内蒙古研究</li>
-        <li>政治经济学与经济人类学</li>
-        <li>国家治理、市场化与地方生活</li>
-        <li>科学技术研究与金融社会研究</li>
-      </ul>
-    </div>
-  </main>
+/* 首页布局 */
+.home {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 52px;
+  align-items: start;
+}
 
-  <footer class="site-footer">
-    © 2026 云晨宇
-  </footer>
-</body>
-</html>
+/* 首页头像：保留方形比例 */
+.profile-photo {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 标题与正文 */
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 18px;
+  letter-spacing: 0.04em;
+}
+
+h2 {
+  font-size: 23px;
+  font-weight: 500;
+  margin-top: 42px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 16px;
+  margin: 0 0 18px;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #777;
+}
+
+/* 列表 */
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* 页面底部 */
+.site-footer {
+  max-width: 980px;
+  margin: 70px auto 30px;
+  padding: 0 24px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* 随笔列表 */
+.essay-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.essay-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.essay-date {
+  color: #888;
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+/* 手机端适配 */
+@media (max-width: 760px) {
+  .navbar {
+    display: block;
+  }
+
+  .nav-links {
+    margin-top: 12px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 18px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
