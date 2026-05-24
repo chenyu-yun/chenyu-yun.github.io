@@ -68,6 +68,26 @@ body {
   border-radius: 4px;
 }
 
+/* 联系方式页面 */
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 52px;
+  align-items: start;
+}
+
+.contact-photo-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-photo {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 /* 标题与正文 */
 h1 {
   font-size: 32px;
@@ -140,38 +160,6 @@ li {
   margin-right: 12px;
 }
 
-/* 手机端适配 */
-@media (max-width: 760px) {
-  .navbar {
-    display: block;
-  }
-
-  .nav-links {
-    margin-top: 12px;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    margin-right: 18px;
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-
-  .home {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-photo {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-}
-
 /* 随笔目录页 */
 .essay-index {
   margin-top: 36px;
@@ -232,29 +220,48 @@ li {
   color: #555;
 }
 
-/* 联系方式页面 */
-.contact-page {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 52px;
-  align-items: start;
-}
-
-.contact-photo {
-  width: 300px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
+/* 手机端适配 */
 @media (max-width: 760px) {
+  .navbar {
+    display: block;
+  }
+
+  .nav-links {
+    margin-top: 12px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 18px;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
   .contact-page {
     grid-template-columns: 1fr;
+  }
+
+  .contact-photo-wrap {
+    justify-content: flex-start;
   }
 
   .contact-photo {
     width: 100%;
     max-width: 320px;
     height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
   }
 }
