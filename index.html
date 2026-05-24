@@ -1,173 +1,64 @@
-/* 基础设置 */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云晨宇</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-body {
-  margin: 0;
-  font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
-  color: #222;
-  background-color: #fff;
-  line-height: 1.8;
-}
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="site-title" href="index.html">云晨宇</a>
+      <div class="nav-links">
+        <a href="index.html">主页</a>
+        <a href="research.html">研究</a>
+        <a href="essays.html">随笔</a>
+        <a href="contact.html">联系方式</a>
+      </div>
+    </nav>
+  </header>
 
-/* 页面整体宽度 */
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+  <main class="container home">
+    <div>
+      <img class="profile-photo" src="assets/profile.jpg" alt="云晨宇的个人照片">
+    </div>
 
-/* 顶部导航栏 */
-.site-header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 48px;
-}
+    <div>
+      <p>
+        欢迎！
+      </p>
 
-.navbar {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 22px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+      <p>
+        我是云晨宇，目前是中央民族大学人类学专业硕士研究生。此前，我也在中央民族大学完成了社会学本科阶段的学习，并系统修读了人类学与考古学相关课程。硕士期间，我曾作为访问研究生赴蒙古国立大学人类学与考古学系学习，并在蒙古国牧区开展田野调查。
+      </p>
 
-.site-title {
-  font-size: 22px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #111;
-  letter-spacing: 0.04em;
-}
+      <p>
+        我的硕士学位论文《游牧的双重生命：一个蒙古国牧区的民族志》正是基于这一时期的田野工作完成的。在这项研究中，我关注后社会主义时期蒙古国牧区的社会变迁，尤其是政治经济环境变化、国际资本进入与国家治理方式转型如何共同影响牧民的日常生活。论文试图说明，作为一种生计方式的游牧似乎正在逐步衰落；但与此同时，作为认同符号、文化资源与国家叙事的“游牧”，却在被不断强化。
+      </p>
 
-.nav-links a {
-  margin-left: 28px;
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-}
+      <p>
+        关于蒙古国，我仍有许多希望在未来逐步展开的研究想法。过去几十年间，蒙古国经历了剧烈而复杂的社会变迁，这使得这片土地仍有许多值得深入讨论的问题。只是我目前能力有限，也希望能与更多有志于蒙古研究、内亚研究和人类学研究的朋友保持交流。
+      </p>
 
-.nav-links a:hover {
-  color: #777;
-}
+      <p>
+        我即将前往北京大学攻读人类学专业博士学位。
+      </p>
 
-/* 首页布局 */
-.home {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 52px;
-  align-items: start;
-}
+      <h2>研究兴趣</h2>
 
-/* 首页头像：保留方形比例 */
-.profile-photo {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 4px;
-}
+      <ul>
+        <li>医学、健康与社会</li>
+        <li>蒙古国与内蒙古研究</li>
+        <li>国家治理、市场化与地方生活</li>
+        <li>科学技术研究与金融社会研究</li>
+      </ul>
+    </div>
+  </main>
 
-/* 标题与正文 */
-h1 {
-  font-size: 32px;
-  font-weight: 500;
-  margin: 0 0 18px;
-  letter-spacing: 0.04em;
-}
-
-h2 {
-  font-size: 23px;
-  font-weight: 500;
-  margin-top: 42px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
-}
-
-h3 {
-  font-size: 19px;
-  font-weight: 500;
-  margin-top: 28px;
-  margin-bottom: 8px;
-}
-
-p {
-  font-size: 16px;
-  margin: 0 0 18px;
-}
-
-a {
-  color: #333;
-}
-
-a:hover {
-  color: #777;
-}
-
-/* 列表 */
-ul {
-  padding-left: 22px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-/* 页面底部 */
-.site-footer {
-  max-width: 980px;
-  margin: 70px auto 30px;
-  padding: 0 24px;
-  color: #888;
-  font-size: 14px;
-}
-
-/* 随笔列表 */
-.essay-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.essay-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.essay-date {
-  color: #888;
-  font-size: 14px;
-  margin-right: 12px;
-}
-
-/* 手机端适配 */
-@media (max-width: 760px) {
-  .navbar {
-    display: block;
-  }
-
-  .nav-links {
-    margin-top: 12px;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-    margin-right: 18px;
-    display: inline-block;
-    margin-bottom: 8px;
-  }
-
-  .home {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-photo {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-}
+  <footer class="site-footer">
+    © 2026 云晨宇
+  </footer>
+</body>
+</html>
