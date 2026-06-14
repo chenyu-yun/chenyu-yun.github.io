@@ -60,12 +60,12 @@ body {
   align-items: start;
 }
 
-/* 首页头像：自由比例 */
+/* 首页照片：按照原始比例显示 */
 .profile-photo {
   width: 320px;
   height: auto;
-  object-fit: cover;
   border-radius: 4px;
+  display: block;
 }
 
 /* 联系方式页面 */
@@ -81,11 +81,13 @@ body {
   justify-content: flex-end;
 }
 
+/* 联系方式页面照片：按照原始比例显示 */
 .contact-photo {
   width: 300px;
   height: auto;
   object-fit: contain;
   border-radius: 4px;
+  display: block;
 }
 
 /* 标题与正文 */
