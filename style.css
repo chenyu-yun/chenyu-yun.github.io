@@ -198,11 +198,20 @@ li {
 /* 单篇随笔正文 */
 .article-page {
   max-width: 820px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.article-page article {
+  width: 100%;
 }
 
 .article-title {
   font-size: 30px;
-  margin-bottom: 8px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
 }
 
 .article-meta {
@@ -211,8 +220,17 @@ li {
   margin-bottom: 36px;
 }
 
+.article-content {
+  width: 100%;
+}
+
 .article-content p {
   margin-bottom: 22px;
+  text-align: justify;
+}
+
+.article-content h2 {
+  margin-top: 48px;
 }
 
 .back-link {
@@ -261,6 +279,14 @@ li {
     width: 100%;
     max-width: 320px;
     height: auto;
+  }
+
+  .article-page {
+    padding: 0 24px;
+  }
+
+  .article-title {
+    font-size: 26px;
   }
 
   h1 {
