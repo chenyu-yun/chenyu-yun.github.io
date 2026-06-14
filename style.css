@@ -60,10 +60,10 @@ body {
   align-items: start;
 }
 
-/* 首页头像：保留方形比例 */
+/* 首页头像：自由比例 */
 .profile-photo {
   width: 320px;
-  height: 320px;
+  height: auto;
   object-fit: cover;
   border-radius: 4px;
 }
