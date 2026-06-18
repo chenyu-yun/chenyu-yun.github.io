@@ -127,7 +127,7 @@ a:hover {
   color: #777;
 }
 
-/* 列表 */
+/* 普通列表 */
 ul {
   padding-left: 22px;
 }
@@ -145,31 +145,90 @@ li {
   font-size: 14px;
 }
 
-/* 随笔列表 */
-.essay-list {
-  list-style: none;
-  padding-left: 0;
-}
+/* =========================
+   随笔目录页：卡片模式
+========================= */
 
-.essay-list li {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.essay-date {
-  color: #888;
-  font-size: 14px;
-  margin-right: 12px;
-}
-
-/* 随笔目录页 */
 .essay-index {
   margin-top: 36px;
 }
 
+.essay-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 22px;
+}
+
+.essay-item {
+  margin-bottom: 0;
+  padding: 24px 26px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.essay-item:hover {
+  border-color: #d8d8d8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.essay-title {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.essay-title:hover {
+  color: #777;
+}
+
+.essay-tag {
+  color: #111;
+  font-weight: 500;
+}
+
+.essay-separator {
+  color: #888;
+  margin: 0 2px;
+  font-weight: 400;
+}
+
+.essay-date {
+  display: block;
+  color: #888;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.essay-summary {
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* 兼容旧版 essay-card 写法 */
 .essay-card {
-  padding: 24px 0;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 24px 26px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 22px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.essay-card:hover {
+  border-color: #d8d8d8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
 }
 
 .essay-card h2 {
@@ -195,7 +254,10 @@ li {
   margin-bottom: 12px;
 }
 
-/* 单篇随笔正文 */
+/* =========================
+   单篇随笔正文
+========================= */
+
 .article-page {
   max-width: 820px;
   margin: 0 auto;
@@ -240,6 +302,34 @@ li {
   color: #555;
 }
 
+.back-link:hover {
+  color: #777;
+}
+
+/* 兼容之前新建文章时可能用到的类名 */
+.essay-page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.essay-article {
+  width: 100%;
+}
+
+.essay-article h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+}
+
+.essay-article p {
+  margin-bottom: 22px;
+  text-align: justify;
+}
+
 /* 手机端适配 */
 @media (max-width: 760px) {
   .navbar {
@@ -281,12 +371,23 @@ li {
     height: auto;
   }
 
-  .article-page {
+  .article-page,
+  .essay-page {
     padding: 0 24px;
   }
 
-  .article-title {
+  .article-title,
+  .essay-article h1 {
     font-size: 26px;
+  }
+
+  .essay-item,
+  .essay-card {
+    padding: 20px 20px;
+  }
+
+  .essay-title {
+    font-size: 20px;
   }
 
   h1 {
