@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>云晨宇</title>
   <link rel="stylesheet" href="style.css">
+  <script src="particles.js" defer></script>
 </head>
 
-<body>
-  <header class="site-header">
+<body class="home-page">
+  <header class="site-header home-header">
     <nav class="navbar">
       <a class="site-title" href="index.html">云晨宇</a>
       <div class="nav-links">
-        <a href="index.html">主页</a>
+        <a href="index.html" aria-current="page">主页</a>
         <a href="research.html">研究</a>
         <a href="essays.html">随笔</a>
         <a href="contact.html">联系方式</a>
@@ -20,15 +21,40 @@
     </nav>
   </header>
 
-  <main class="container home">
-    <div>
-      <img class="profile-photo" src="assets/profile.jpg" alt="云晨宇的个人照片">
+  <section class="home-hero" data-particle-hero aria-labelledby="hero-title">
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <canvas class="particle-grid" aria-hidden="true"></canvas>
+
+    <div class="hero-shell">
+      <div class="hero-copy">
+        <p class="hero-kicker">Anthropology · Inner Asia · Fieldwork</p>
+        <h1 id="hero-title">云晨宇</h1>
+        <p class="hero-lead">田野、写作与边疆社会研究</p>
+        <p class="hero-description">
+          关注蒙古国与内蒙古社会，以及国家治理、市场化与地方生活之间的关系。
+        </p>
+        <div class="hero-actions">
+          <a class="hero-button hero-button-primary" href="research.html">了解我的研究</a>
+          <a class="hero-button hero-button-secondary" href="#about">阅读个人介绍</a>
+        </div>
+      </div>
+
+      <figure class="hero-portrait">
+        <div class="hero-portrait-glow" aria-hidden="true"></div>
+        <img src="assets/profile.jpg" alt="云晨宇的个人照片" width="600" height="900" fetchpriority="high" decoding="async">
+      </figure>
     </div>
 
-    <div>
-      <p>
-        欢迎！
-      </p>
+    <a class="hero-scroll" href="#about" aria-label="向下阅读个人介绍">
+      <span>Scroll</span>
+      <i aria-hidden="true"></i>
+    </a>
+  </section>
+
+  <main id="about" class="container home-intro">
+    <article class="home-intro-copy">
+      <p class="section-label">About</p>
+      <h2>关于我</h2>
 
       <p>
         我是云晨宇，目前是中央民族大学人类学专业硕士研究生。在此之前，我在这里完成了社会学本科阶段的学习，并系统修读了人类学与考古学相关课程。硕士期间，我曾作为访问研究生赴蒙古国立大学人类学与考古学系学习，并在蒙古国牧区开展田野调查。
@@ -54,7 +80,7 @@
         <li>国家治理、市场化与地方生活</li>
         <li>科学技术研究与金融社会研究</li>
       </ul>
-    </div>
+    </article>
   </main>
 
   <footer class="site-footer">

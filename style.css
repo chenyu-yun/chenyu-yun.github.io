@@ -11,6 +11,10 @@ body {
   line-height: 1.8;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 页面整体宽度 */
 .container {
   max-width: 980px;
@@ -50,6 +54,314 @@ body {
 
 .nav-links a:hover {
   color: #777;
+}
+
+/* =========================
+   首页：互动首屏
+========================= */
+
+.home-page {
+  --hero-mouse-x: 72%;
+  --hero-mouse-y: 38%;
+  background: #fff;
+}
+
+.home-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 20;
+  margin-bottom: 0;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.home-header .site-title,
+.home-header .nav-links a {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.home-header .site-title {
+  color: #fff;
+}
+
+.home-header .nav-links a {
+  position: relative;
+}
+
+.home-header .nav-links a::after {
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  left: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.78);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.home-header .nav-links a:hover,
+.home-header .nav-links a[aria-current="page"] {
+  color: #fff;
+}
+
+.home-header .nav-links a:hover::after,
+.home-header .nav-links a[aria-current="page"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.home-hero {
+  position: relative;
+  min-height: 760px;
+  height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  color: #f7f9ff;
+  background:
+    radial-gradient(circle at 50% 112%, rgba(36, 86, 150, 0.45), transparent 45%),
+    linear-gradient(150deg, #05070b 0%, #080c15 48%, #07101f 100%);
+}
+
+.home-hero::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: 4;
+  height: 18%;
+  background: linear-gradient(to bottom, transparent, #fff);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-aurora {
+  position: absolute;
+  inset: -18%;
+  z-index: 0;
+  background:
+    radial-gradient(
+      circle at var(--hero-mouse-x) var(--hero-mouse-y),
+      rgba(112, 163, 247, 0.3),
+      rgba(44, 92, 166, 0.13) 19%,
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 43% 78%,
+      rgba(31, 78, 143, 0.38),
+      transparent 51%
+    ),
+    radial-gradient(
+      circle at 12% 22%,
+      rgba(35, 61, 112, 0.22),
+      transparent 34%
+    );
+  filter: blur(42px) saturate(125%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.96) 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.96) 70%, transparent 100%);
+  pointer-events: none;
+}
+
+.particle-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 69%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 69%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero-shell {
+  position: relative;
+  z-index: 3;
+  width: min(1120px, calc(100% - 48px));
+  height: 100%;
+  min-height: 760px;
+  margin: 0 auto;
+  padding: 128px 0 112px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: clamp(54px, 8vw, 110px);
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 660px;
+  padding-bottom: 3vh;
+}
+
+.hero-kicker,
+.section-label {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-kicker {
+  margin-bottom: 26px;
+  color: rgba(181, 207, 255, 0.74);
+}
+
+.hero-copy h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(68px, 9vw, 132px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 44px rgba(97, 146, 232, 0.12);
+}
+
+.hero-lead {
+  margin: 32px 0 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(20px, 2.2vw, 27px);
+  letter-spacing: 0.08em;
+}
+
+.hero-description {
+  max-width: 560px;
+  margin-bottom: 0;
+  color: rgba(220, 229, 247, 0.62);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-button {
+  min-width: 138px;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-button:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.hero-button-primary {
+  border-color: rgba(202, 220, 255, 0.34);
+  background: rgba(136, 174, 244, 0.16);
+  box-shadow: inset 0 0 22px rgba(158, 190, 249, 0.08);
+}
+
+.hero-button-primary:hover {
+  border-color: rgba(215, 228, 255, 0.58);
+  background: rgba(136, 174, 244, 0.24);
+}
+
+.hero-button-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-button:focus-visible,
+.home-header a:focus-visible,
+.hero-scroll:focus-visible {
+  outline: 2px solid rgba(207, 225, 255, 0.92);
+  outline-offset: 4px;
+}
+
+.hero-portrait {
+  position: relative;
+  width: min(100%, 340px);
+  margin: 0;
+  justify-self: end;
+}
+
+.hero-portrait::before {
+  position: absolute;
+  inset: -1px;
+  z-index: 1;
+  border: 1px solid rgba(225, 235, 255, 0.22);
+  border-radius: 5px;
+  content: "";
+  pointer-events: none;
+}
+
+.hero-portrait-glow {
+  position: absolute;
+  inset: 9% -14% -6%;
+  z-index: -1;
+  border-radius: 50%;
+  background: rgba(66, 119, 199, 0.28);
+  filter: blur(54px);
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  filter: saturate(0.84) contrast(1.04) brightness(0.9);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.42);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.hero-scroll:hover {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.hero-scroll i {
+  width: 1px;
+  height: 38px;
+  display: block;
+  background: linear-gradient(to bottom, currentColor, transparent);
+}
+
+.home-intro {
+  padding-top: 82px;
+}
+
+.home-intro-copy {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.section-label {
+  margin-bottom: 4px;
+  color: #7890b5;
+}
+
+.home-intro h2:first-of-type {
+  margin-top: 0;
 }
 
 /* 首页布局 */
@@ -392,5 +704,119 @@ li {
 
   h1 {
     font-size: 28px;
+  }
+
+  .home-header .navbar {
+    padding-top: 18px;
+    padding-bottom: 16px;
+    display: flex;
+    gap: 18px;
+  }
+
+  .home-header .nav-links {
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+
+  .home-header .nav-links a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .home-header .site-title {
+    font-size: 19px;
+    white-space: nowrap;
+  }
+
+  .home-hero {
+    min-height: 960px;
+    height: auto;
+  }
+
+  .hero-shell {
+    width: min(100% - 48px, 520px);
+    min-height: 960px;
+    height: auto;
+    padding: 142px 0 126px;
+    grid-template-columns: 1fr;
+    gap: 52px;
+    align-content: center;
+  }
+
+  .hero-copy {
+    padding-bottom: 0;
+  }
+
+  .hero-kicker {
+    margin-bottom: 20px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(58px, 20vw, 86px);
+  }
+
+  .hero-lead {
+    margin-top: 24px;
+    font-size: 20px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    margin-top: 26px;
+  }
+
+  .hero-portrait {
+    width: min(70vw, 260px);
+    justify-self: center;
+  }
+
+  .hero-scroll {
+    bottom: 30px;
+  }
+
+  .home-intro {
+    padding-top: 58px;
+  }
+}
+
+@media (max-width: 430px) {
+  .home-header .navbar {
+    align-items: flex-start;
+  }
+
+  .home-header .nav-links {
+    max-width: 210px;
+  }
+
+  .hero-shell {
+    width: calc(100% - 40px);
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-button,
+  .home-header .nav-links a::after {
+    transition: none;
   }
 }
