@@ -38,11 +38,19 @@ html {
 }
 
 .site-title {
+  display: block;
+  line-height: 0;
   font-size: 22px;
   font-weight: 600;
   text-decoration: none;
   color: #111;
   letter-spacing: 0.04em;
+}
+
+.site-signature {
+  display: block;
+  width: 112px;
+  height: auto;
 }
 
 .nav-links a {
@@ -81,6 +89,10 @@ html {
 
 .home-header .site-title {
   color: #fff;
+}
+
+.home-header .site-signature {
+  filter: invert(1);
 }
 
 .home-header .nav-links a {
@@ -222,7 +234,6 @@ html {
   max-width: 100%;
   height: auto;
   filter: invert(1);
-  mix-blend-mode: screen;
 }
 
 .hero-lead {
@@ -736,8 +747,11 @@ li {
   }
 
   .home-header .site-title {
-    font-size: 19px;
     white-space: nowrap;
+  }
+
+  .home-header .site-signature {
+    width: 96px;
   }
 
   .home-hero {
