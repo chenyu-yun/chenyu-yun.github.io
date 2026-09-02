@@ -216,6 +216,15 @@ html {
   text-shadow: 0 0 44px rgba(97, 146, 232, 0.12);
 }
 
+.hero-signature {
+  display: block;
+  width: clamp(280px, 38vw, 457px);
+  max-width: 100%;
+  height: auto;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+
 .hero-lead {
   margin: 32px 0 12px;
   color: rgba(255, 255, 255, 0.9);
